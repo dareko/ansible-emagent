@@ -27,16 +27,16 @@
   with_items: emagent_packages
   tags: install
 
-- name: creating {{ _emagent.group }} group
-  command: /usr/sbin/lgroupadd -g 11000 {{ _emagent.group }}
-  failed_when: false
-  #group: name={{ _emagent.group }} gid=11000
+- name: creating emagent group
+  group: name={{ _emagent.group }} state=present
+  #command: /usr/sbin/lgroupadd -g {{ emagent_group_id }} {{ _emagent.group }}
+  #failed_when: false
   tags: user
 
-- name: creating {{ _emagent.user }} user
-  command: /usr/sbin/luseradd -g {{ _emagent.group }} -u 11000 {{ _emagent.user }}
-  failed_when: false
-  #user: name={{ _emagent.user }} group={{ _emagent.group }} uid=11000
+- name: creating emagent user
+  user: name={{ _emagent.user }} group={{ _emagent.group }} state=present
+  #command: /usr/sbin/luseradd -g {{ _emagent.group }} -u {{ emagent_user_id }} {{ _emagent.user }}
+  #failed_when: false
   tags: user
 
 - name: creating base directory
