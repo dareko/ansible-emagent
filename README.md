@@ -1,12 +1,10 @@
 Oracle Enterprise Manager Agent Deployment Role
 ===============================================
 
-The [dareko.emagent](https://galaxy.ansibleworks.com/list#/roles/...) role deploys the Oracle Enterprise Manager agent on a target host.
+The [dareko.emagent](https://galaxy.ansibleworks.com/list#/roles/290) role deploys the Oracle Enterprise Manager agent on a target host.
 It requires the Oracle Enterprise Manager agent image to be provided by the user.
 
 The oinstall group and the oracle account are created by the role if they don't exist.
-
-GitHub project page: [ansible-emagent](https://github.com/dareko/ansible-emagent).
 
 Requirements
 ------------
