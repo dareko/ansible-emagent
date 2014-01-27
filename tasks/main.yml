@@ -10,7 +10,7 @@
   tags: check
 
 - name: emagent image file missing
-  fail: msg="Agent image file missing, please prepare by executing
+  fail: msg="Agent image file missing, prepare by executing
              emcli get_agentimage -platform=\"{{ ansible_system }} {{ ansible_architecture | replace('_', '-') }}\"
                                   -version={{ emagent_version }}
                                   -destination=/tmp"
