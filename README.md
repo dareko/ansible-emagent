@@ -52,8 +52,13 @@ The variables that can be passed to this role with default values are as follows
 
 See the Oracle Enterprise Manager documentation for details.
 
-Example
--------
+Dependencies
+------------
+
+None
+
+Example Playbook
+----------------
 
 1. Add a group to the `hosts` inventory file
 
@@ -79,11 +84,6 @@ Example
 4. Run the `site.yml` playbook
 
         ansible-playbook -i hosts site.yml
-
-Dependencies
-------------
-
-None
 
 License
 -------
